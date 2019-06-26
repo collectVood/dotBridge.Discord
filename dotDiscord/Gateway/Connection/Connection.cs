@@ -64,6 +64,56 @@ namespace DotDiscord.Gateway.Connection
 
         #endregion
         
+        #region Socket interaction
+
+        private void OnDispatchReceived(Payload payload)
+        {
+            
+        }
+
+        private void OnPayloadReceived(Payload payload)
+        {
+            switch (payload.Opcode)
+            {
+                case null:
+                {
+                    // TODO: Throw exception
+                    break;
+                }
+
+                #region Dispatch
+                
+                case OpCode.Gateway.Dispatch:
+                {
+                    OnDispatchReceived(payload);
+                    break;
+                }
+                
+                #endregion
+
+                case OpCode.Gateway.InvalidSession:
+                {
+                    Reconnect(5000d);
+                    break;
+                }
+
+                #region Heartbeating
+                
+                case OpCode.Gateway.HeartbeatACK:
+                {
+                    _receivedACK = true;
+                    break;
+                }
+                
+                #endregion
+            }
+        }
+
+        public void Send(Payload payload, Action<bool> onCompleted) =>
+            _socket.SendAsync(payload.ToString(), onCompleted);
+        
+        #endregion
+        
         #region Interaction
 
         /// <summary>
@@ -136,26 +186,45 @@ namespace DotDiscord.Gateway.Connection
         
         #endregion
         
-        #region WebSocket Event Handlers
+        #region Socket event handlers
         
         private void OnSocketOpen(object sender, EventArgs e)
         {
-            
+            // TODO
         }
 
         private void OnSocketClose(object sender, CloseEventArgs e)
         {
-            
+            var code = (OpCode.GatewayClose) e.Code;
+            var isDefined = Enum.IsDefined(typeof(OpCode.GatewayClose), code);
+            if (isDefined)
+            {
+                // TODO: Throw exception
+            }
+            else
+            {
+                // TODO: Throw exception
+            }
+
+            Reconnect(Client.Configuration.ReconnectIn);
         }
 
         private void OnSocketError(object sender, ErrorEventArgs e)
         {
+            // TODO: Throw exception
             
+            Reconnect(Client.Configuration.ReconnectIn);
         }
 
         private void OnSocketMessage(object sender, MessageEventArgs e)
         {
+            var payload = Payload.Parse(e.Data);
+            if (payload == null)
+            {
+                // TODO: Throw error
+            }
             
+            OnPayloadReceived(payload);
         }
         
         #endregion
