@@ -32,12 +32,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WebSocketSharp" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="WebSocketSharpFork" Version="1.0.4" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientConfiguration.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Gateway\Connection\Connection.cs" />
+    <Compile Include="Gateway\Connection\ConnectionData.cs" />
+    <Compile Include="Gateway\OpCode.cs" />
+    <Compile Include="Gateway\Payload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
