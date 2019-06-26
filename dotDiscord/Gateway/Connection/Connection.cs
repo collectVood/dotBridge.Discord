@@ -8,6 +8,11 @@ namespace DotDiscord.Gateway.Connection
     public class Connection
     {
         public readonly Client Client;
+        
+        public event Events.OnSocketClose OnClose;
+        public event Events.OnSocketError OnError;
+        public event Events.OnInvalidOpcode OnInvalidOpcode;
+        public event Events.OnInvalidPayload OnInvalidPayload;
 
         private WebSocket _socket;
 
@@ -33,6 +38,11 @@ namespace DotDiscord.Gateway.Connection
         internal Connection(Client client)
         {
             Client = client;
+
+            OnClose = e => { };
+            OnError = e => { };
+            OnInvalidOpcode = payload => { };
+            OnInvalidPayload = data => { };
 
             _socket = new WebSocket(ConnectionData.URL);
             _socket.OnOpen += OnSocketOpen;
@@ -77,7 +87,7 @@ namespace DotDiscord.Gateway.Connection
             {
                 case null:
                 {
-                    // TODO: Throw exception
+                    OnInvalidOpcode?.Invoke(payload);
                     break;
                 }
 
@@ -195,36 +205,25 @@ namespace DotDiscord.Gateway.Connection
 
         private void OnSocketClose(object sender, CloseEventArgs e)
         {
-            var code = (OpCode.GatewayClose) e.Code;
-            var isDefined = Enum.IsDefined(typeof(OpCode.GatewayClose), code);
-            if (isDefined)
-            {
-                // TODO: Throw exception
-            }
-            else
-            {
-                // TODO: Throw exception
-            }
-
             Reconnect(Client.Configuration.ReconnectIn);
+            OnClose?.Invoke(e);
         }
 
         private void OnSocketError(object sender, ErrorEventArgs e)
         {
-            // TODO: Throw exception
-            
             Reconnect(Client.Configuration.ReconnectIn);
+            OnError?.Invoke(e.Exception);
         }
 
         private void OnSocketMessage(object sender, MessageEventArgs e)
         {
             var payload = Payload.Parse(e.Data);
-            if (payload == null)
+            if (payload != null)
             {
-                // TODO: Throw error
+                OnPayloadReceived(payload);
             }
-            
-            OnPayloadReceived(payload);
+
+            OnInvalidPayload?.Invoke(e.Data);
         }
         
         #endregion
