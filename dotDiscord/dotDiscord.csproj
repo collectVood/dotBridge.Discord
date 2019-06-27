@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -47,6 +47,16 @@
     <Compile Include="Gateway\Connection\ConnectionData.cs" />
     <Compile Include="Gateway\OpCode.cs" />
     <Compile Include="Gateway\Payload.cs" />
+    <Compile Include="Objects\Activity.cs" />
+    <Compile Include="Objects\ActivityAssets.cs" />
+    <Compile Include="Objects\ActivityFlags.cs" />
+    <Compile Include="Objects\ActivityParty.cs" />
+    <Compile Include="Objects\ActivitySecrets.cs" />
+    <Compile Include="Objects\ActivityTimestamps.cs" />
+    <Compile Include="Objects\ActivityType.cs" />
+    <Compile Include="Objects\ClientStatus.cs" />
+    <Compile Include="Objects\SessionStartLimit.cs" />
+    <Compile Include="Objects\StatusType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
