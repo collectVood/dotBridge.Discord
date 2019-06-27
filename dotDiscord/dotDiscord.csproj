@@ -45,7 +45,6 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Gateway\Connection\Connection.cs" />
     <Compile Include="Gateway\Connection\ConnectionData.cs" />
-    <Compile Include="Gateway\Event\ActivityFlags.cs" />
     <Compile Include="Gateway\Event\ChannelPinsUpdate.cs" />
     <Compile Include="Gateway\Event\GuildBanAdd.cs" />
     <Compile Include="Gateway\Event\GuildBanRemove.cs" />
@@ -84,6 +83,8 @@
     <Compile Include="Objects\ActivitySecrets.cs" />
     <Compile Include="Objects\ActivityTimestamps.cs" />
     <Compile Include="Objects\ActivityType.cs" />
+    <Compile Include="Objects\AuditLogChange.cs" />
+    <Compile Include="Objects\AuditLogEvents.cs" />
     <Compile Include="Objects\ClientStatus.cs" />
     <Compile Include="Objects\SessionStartLimit.cs" />
     <Compile Include="Objects\StatusType.cs" />
