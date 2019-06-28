@@ -1,4 +1,4 @@
-# Contributing to DotDiscord
+# Contributing to dotBridge.Discord
 
 Thank you for contributing or any of your future contributions!
 

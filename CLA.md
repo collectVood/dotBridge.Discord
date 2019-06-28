@@ -1,10 +1,10 @@
 # Contribution License Agreement
 
-> We thank You for Your interest in DotDiscord.
+> We thank You for Your interest in dotBridge projects.
 
 This Agreement covers all Contributions that You made, make or will make.
 
-By making a Contribution You confirm that You agree to the following terms and conditions for all Your Contributions for DotDiscord.
+By making a Contribution You confirm that You agree to the following terms and conditions for all Your Contributions for dotBridge projects.
 
 By making a Contribution You confirm that the entire Contribution is entirely Your work and that You have all the copyrights in the entire Contribution.
 
