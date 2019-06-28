@@ -1,8 +1,8 @@
-# Welcome to DotDiscord!
+# Welcome to dotBridge projects!
 
-## About DotDiscord
+## About Discord
 
-DotDiscord is an open-source C# library for Discord API, Gateways, etc interaction.
+dotBridge.Discord is an open-source C# library for Discord API, Gateways, etc interaction.
 
 ## Contribution
 
