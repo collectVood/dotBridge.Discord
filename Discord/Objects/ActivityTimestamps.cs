@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
@@ -5,9 +6,9 @@ namespace dotBridge.Discord.Objects
     public class ActivityTimestamps
     {
         [JsonProperty(PropertyName = "start")]
-        public int? Start;
+        public Optional<int> Start;
         
         [JsonProperty(PropertyName = "end")]
-        public int? End;
+        public Optional<int> End;
     }
 }

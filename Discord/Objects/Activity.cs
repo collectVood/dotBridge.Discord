@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
@@ -11,30 +12,34 @@ namespace dotBridge.Discord.Objects
         public int ActivityTypeRaw;
         
         [JsonProperty(PropertyName = "url")]
-        public string URL;
+        public Optional<string> URL;
         
-        // TODO: Timestamps object
+        [JsonProperty(PropertyName = "timestamps")]
+        public Optional<ActivityTimestamps> Timestamps;
         
         [JsonProperty(PropertyName = "application_id")]
-        public int? ApplicationID;
+        public Optional<int> ApplicationID;
         
         [JsonProperty(PropertyName = "Details")]
-        public string Details;
+        public Optional<string> Details;
         
         [JsonProperty(PropertyName = "state")]
-        public string State;
-        
-        // TODO: Party object
-        
-        // TODO: Assets object
-        
-        // TODO: Secrets object
+        public Optional<string> State;
+
+        [JsonProperty(PropertyName = "party")]
+        public Optional<ActivityParty> Party;
+
+        [JsonProperty(PropertyName = "assets")]
+        public Optional<ActivityAssets> Assets;
+
+        [JsonProperty(PropertyName = "secrets")]
+        public Optional<ActivitySecrets> Secrets;
         
         [JsonProperty(PropertyName = "instance")]
-        public bool? Instance;
+        public Optional<bool> Instance;
         
         [JsonProperty(PropertyName = "flags")]
-        public int? Flags;
+        public Optional<int> Flags;
 
         [JsonIgnore]
         public ActivityType? ActivityType => (ActivityType?) ActivityTypeRaw;

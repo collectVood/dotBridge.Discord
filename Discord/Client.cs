@@ -111,7 +111,7 @@ namespace dotBridge.Discord
             }
             finally
             {
-                // TODO: Close connection
+                Connection.Close();
                 if (exception != null)
                     throw exception;
             }

@@ -51,7 +51,7 @@ namespace dotBridge.Discord.Gateway.Connection
             _socket.OnMessage += OnSocketMessage;
             
             _heartbeatTimer = new Timer();
-            // TODO: Run heartbeat
+            _heartbeatTimer.Elapsed += (obj, e) => Heartbeat();
             _reconnectTimer = new Timer();
             _reconnectTimer.Elapsed += (obj, e) => Connect();
 
@@ -193,6 +193,15 @@ namespace dotBridge.Discord.Gateway.Connection
         public bool IsConnecting => _socket.ReadyState == WebSocketState.Connecting;
 
         public bool IsOpen => _socket.ReadyState == WebSocketState.Open;
+        
+        #endregion
+        
+        #region Heartbeating
+
+        private void Heartbeat()
+        {
+            // TODO: Heartbeat and add check whether received ACK
+        }
         
         #endregion
         

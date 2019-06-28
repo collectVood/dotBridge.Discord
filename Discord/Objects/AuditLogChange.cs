@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
@@ -5,10 +6,10 @@ namespace dotBridge.Discord.Objects
     public class AuditLogChange
     {
         [JsonProperty(PropertyName = "new_value")]
-        public object NewValueRaw;
+        public Optional<object> NewValueRaw;
 
         [JsonProperty(PropertyName = "old_value")]
-        public object OldValueRaw;
+        public Optional<object> OldValueRaw;
 
         [JsonProperty(PropertyName = "key")]
         public string Key;

@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
@@ -5,9 +6,9 @@ namespace dotBridge.Discord.Objects
     public class ActivityParty
     {
         [JsonProperty(PropertyName = "id")]
-        public string Party;
+        public Optional<string> Party;
 
         [JsonProperty(PropertyName = "size")]
-        public int[] Size;
+        public Optional<int[]> Size;
     }
 }

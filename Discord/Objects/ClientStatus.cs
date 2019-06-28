@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
@@ -5,12 +6,12 @@ namespace dotBridge.Discord.Objects
     public class ClientStatus
     {
         [JsonProperty(PropertyName = "desktop")]
-        public string Desktop;
+        public Optional<string> Desktop;
         
         [JsonProperty(PropertyName = "mobile")]
-        public string Mobile;
+        public Optional<string> Mobile;
         
         [JsonProperty(PropertyName = "web")]
-        public string Web;
+        public Optional<string> Web;
     }
 }

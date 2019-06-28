@@ -11,7 +11,8 @@ namespace dotBridge.Discord.Gateway.Event
         [JsonProperty(PropertyName = "roles")]
         public string[] Roles;
         
-        // TODO: Activity object
+        [JsonProperty(PropertyName = "game")]
+        public Activity Game;
         
         [JsonProperty(PropertyName = "guild_id")]
         public string Guild;
@@ -19,9 +20,11 @@ namespace dotBridge.Discord.Gateway.Event
         [JsonProperty(PropertyName = "status")]
         public string StatusRaw;
         
-        // TODO: Activities array
+        [JsonProperty(PropertyName = "activities")]
+        public Activity[] Activities;
         
-        // TODO: Client status object
+        [JsonProperty(PropertyName = "client_status")]
+        public ClientStatus ClientStatus;
 
         [JsonIgnore]
         public StatusType? Status

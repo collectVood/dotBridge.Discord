@@ -8,7 +8,8 @@ namespace dotBridge.Discord.Gateway.Event
         [JsonProperty(PropertyName = "since")]
         public int? Since;
         
-        // TODO: Activity
+        [JsonProperty(PropertyName = "game")]
+        public Activity Activity;
 
         [JsonProperty(PropertyName = "status")]
         public string StatusRaw;
