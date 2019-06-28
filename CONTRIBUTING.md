@@ -16,6 +16,7 @@ Thank you for contributing or any of your future contributions!
 
 * [Git commit messages](#git-commit-messages)
 * [Code styling](#code-styling)
+* [XML documentation comments](#xml-documentation-comments)
 
 ## Code of Conduct
 
@@ -78,15 +79,25 @@ You can still do something for this world and improve the code once more. But ne
 * Make first commit line as **small, descriptive and clear**, as possible
 * Do not reference issues or pull requests in the first commit line
 * Consider starting the commit message with an applicable emoji:
-    * :art: `:art:` - Improving format, structure, etc
-    * :memo: `:memo:` - Writing documentation, contributing, etc files
-    * :fire: `:fire:` - Important bug, etc fix
-    * :zap: `:zap:` - Improving performance
-    * :lock: `:lock:` - Dealing with security
-    * :cookie: `:cookie:` - Adding new features and code
+    * :art: `:art:` - Improving **format, structure, etc**
+    * :memo: `:memo:` - Writing **documentation, contributing, etc** files
+    * :pencil2: `:pencil2:` - **Minor** changes
+    * :fire: `:fire:` - Important **bug, etc fix**
+    * :zap: `:zap:` - Improving **performance**
+    * :lock: `:lock:` - Dealing with **security**
+    * :cookie: `:cookie:` - Adding **new features and code**
 
 ### Code styling
 
-* Always specify [access modifiers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
-* Provide less access to the [members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/members) that may be accessed only inside the project
-* Provide [XML documentation comments](https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/xmldoc/)
+* Always specify [**access modifiers**](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
+* Provide **less access** to the [members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/members) that may be accessed only inside the project
+* Provide [**XML documentation** comments](https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/xmldoc/)
+* In case you use **abbreviations** up to 3 letters inclusively, use the **upper-case**
+
+### XML documentation comments
+
+* Use the present tense (**"Get data"**, not **"Will get data"**)
+* Use an imperative mood (**"Set data**, not **"Sets data"**)
+* Make comment as **small, descriptive and clear**, as possible
+* Use [**tags**](https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments)
+* For logical variables (boolean), use **"Whether ..."**. Example: **"Whether the client is active"**
