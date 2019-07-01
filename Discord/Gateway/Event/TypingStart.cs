@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Gateway.Event
@@ -8,7 +9,7 @@ namespace dotBridge.Discord.Gateway.Event
         public string Channel;
         
         [JsonProperty(PropertyName = "guild_id")]
-        public string Guild;
+        public Optional<string> Guild;
         
         [JsonProperty(PropertyName = "user_id")]
         public string User;

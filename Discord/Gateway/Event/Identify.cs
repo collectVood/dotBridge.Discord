@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Gateway.Event
@@ -11,7 +12,7 @@ namespace dotBridge.Discord.Gateway.Event
         public PropertiesData Properties = new PropertiesData();
         
         [JsonProperty(PropertyName = "compress")]
-        public bool? Compress = false;
+        public Optional<bool> Compress = false;
         
         [JsonProperty(PropertyName = "large_threshold")]
         public int LargeThreshold = 50;

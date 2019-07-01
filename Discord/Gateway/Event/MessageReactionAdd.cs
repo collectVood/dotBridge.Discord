@@ -1,3 +1,4 @@
+using dotBridge.Discord.Utils;
 using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Gateway.Event
@@ -14,7 +15,7 @@ namespace dotBridge.Discord.Gateway.Event
         public string Message;
         
         [JsonProperty(PropertyName = "guild_id")]
-        public string Guild;
+        public Optional<string> Guild;
         
         // TODO: Emoji object
     }
