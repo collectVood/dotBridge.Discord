@@ -1,6 +1,6 @@
 namespace dotBridge.Discord.Objects
 {
-    public enum AuditLogEvents
+    public enum AuditLogEvent
     {
         GuildUpdate = 1,
         ChannelCreate = 10,

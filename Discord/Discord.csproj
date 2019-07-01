@@ -83,8 +83,11 @@
     <Compile Include="Objects\ActivitySecrets.cs" />
     <Compile Include="Objects\ActivityTimestamps.cs" />
     <Compile Include="Objects\ActivityType.cs" />
+    <Compile Include="Objects\AuditEntryInfo.cs" />
+    <Compile Include="Objects\AuditLog.cs" />
     <Compile Include="Objects\AuditLogChange.cs" />
-    <Compile Include="Objects\AuditLogEvents.cs" />
+    <Compile Include="Objects\AuditLogEntry.cs" />
+    <Compile Include="Objects\AuditLogEvent.cs" />
     <Compile Include="Objects\ClientStatus.cs" />
     <Compile Include="Objects\SessionStartLimit.cs" />
     <Compile Include="Objects\StatusType.cs" />
