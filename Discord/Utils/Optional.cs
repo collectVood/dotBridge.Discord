@@ -44,7 +44,7 @@ namespace dotBridge.Discord.Utils
 
         public Optional()
         {
-            _value = default;
+            _value = default(T);
             HasValue = false;
         }
         
@@ -57,7 +57,7 @@ namespace dotBridge.Discord.Utils
         /// </summary>
         /// <param name="defaultValue">Default value</param>
         /// <returns>Value or <see cref="defaultValue"/></returns>
-        public T GetValue(T defaultValue = default) => HasValue ? _value : defaultValue;
+        public T GetValue(T defaultValue = default(T)) => HasValue ? _value : defaultValue;
         
         #endregion
         
