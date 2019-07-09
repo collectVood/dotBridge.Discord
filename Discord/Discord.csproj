@@ -84,9 +84,11 @@
     <Compile Include="Objects\AuditLogChange.cs" />
     <Compile Include="Objects\AuditLogEntry.cs" />
     <Compile Include="Objects\AuditLogEvent.cs" />
+    <Compile Include="Objects\Ban.cs" />
     <Compile Include="Objects\Channel.cs" />
     <Compile Include="Objects\ChannelType.cs" />
     <Compile Include="Objects\ClientStatus.cs" />
+    <Compile Include="Objects\DefaultMessageNotificationLevel.cs" />
     <Compile Include="Objects\Embed.cs" />
     <Compile Include="Objects\EmbedAuthor.cs" />
     <Compile Include="Objects\EmbedField.cs" />
@@ -96,15 +98,24 @@
     <Compile Include="Objects\EmbedThumbnail.cs" />
     <Compile Include="Objects\EmbedVideo.cs" />
     <Compile Include="Objects\Emoji.cs" />
+    <Compile Include="Objects\ExplicitContentFilterLevel.cs" />
+    <Compile Include="Objects\Guild.cs" />
+    <Compile Include="Objects\GuildEmbed.cs" />
+    <Compile Include="Objects\GuildMember.cs" />
+    <Compile Include="Objects\Integration.cs" />
+    <Compile Include="Objects\IntegrationAccount.cs" />
     <Compile Include="Objects\Message.cs" />
     <Compile Include="Objects\MessageActivity.cs" />
     <Compile Include="Objects\MessageActivityType.cs" />
     <Compile Include="Objects\MessageApplication.cs" />
     <Compile Include="Objects\MessageType.cs" />
+    <Compile Include="Objects\MfaLevel.cs" />
     <Compile Include="Objects\Overwrite.cs" />
+    <Compile Include="Objects\PremiumTier.cs" />
     <Compile Include="Objects\Reaction.cs" />
     <Compile Include="Objects\SessionStartLimit.cs" />
     <Compile Include="Objects\StatusType.cs" />
+    <Compile Include="Objects\VerificationLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Optional.cs" />
   </ItemGroup>
