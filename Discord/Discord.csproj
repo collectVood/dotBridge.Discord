@@ -95,6 +95,7 @@
     <Compile Include="Objects\EmbedProvider.cs" />
     <Compile Include="Objects\EmbedThumbnail.cs" />
     <Compile Include="Objects\EmbedVideo.cs" />
+    <Compile Include="Objects\Emoji.cs" />
     <Compile Include="Objects\Message.cs" />
     <Compile Include="Objects\MessageActivity.cs" />
     <Compile Include="Objects\MessageActivityType.cs" />
