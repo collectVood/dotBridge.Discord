@@ -14,7 +14,7 @@ namespace dotBridge.Discord.Objects
         public string Type;
 
         [JsonProperty(PropertyName = "revoked")]
-        public bool revoked;
+        public bool Revoked;
 
         [JsonProperty(PropertyName = "integrations")]
         public Integration[] Integrations;
