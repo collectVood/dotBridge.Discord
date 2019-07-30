@@ -115,11 +115,14 @@
     <Compile Include="Objects\MfaLevel.cs" />
     <Compile Include="Objects\Overwrite.cs" />
     <Compile Include="Objects\PremiumTier.cs" />
+    <Compile Include="Objects\PremiumTypes.cs" />
     <Compile Include="Objects\Reaction.cs" />
     <Compile Include="Objects\SessionStartLimit.cs" />
     <Compile Include="Objects\StatusType.cs" />
     <Compile Include="Objects\User.cs" />
+    <Compile Include="Objects\UserFlags.cs" />
     <Compile Include="Objects\VerificationLevel.cs" />
+    <Compile Include="Objects\VisibilityTypes.cs" />
     <Compile Include="Objects\Voice.cs" />
     <Compile Include="Objects\VoiceRegion.cs" />
     <Compile Include="Objects\Webhook.cs" />
