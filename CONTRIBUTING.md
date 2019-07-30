@@ -4,7 +4,7 @@ Thank you for contributing or any of your future contributions!
 
 ## Table of contents
 
-[Code of Conduct](#code-of-conduct)
+[Read before contributing](#read-before-contributing)
 
 [How can I contribute](#how-can-i-contribute)
 
@@ -18,7 +18,7 @@ Thank you for contributing or any of your future contributions!
 * [Code styling](#code-styling)
 * [XML documentation comments](#xml-documentation-comments)
 
-## Code of Conduct
+## Read before contributing
 
 This community, contributors, maintainers and everyone participating in the project is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
@@ -31,7 +31,7 @@ Before contributing you must read the [Contribution License Agreement](CLA.md).
 You are able to report bugs using Issues section in case you found a bug.\
 First of all, make sure it wasn't reported before and the issue is open.
 
-To create a good and friendly bug reports you may:
+To create a good and friendly bug report you should:
 
 * Use a **descriptive and clear title**
 * Describe exactly step-by-step **how can we reproduce the issue**
@@ -57,7 +57,7 @@ Keep being cool :sunglasses:
 
 You can contribute to our code using Pull Requests section.
 
-How to use and create Pull Requests?
+#### How to use and create Pull Requests?
 
 * Create a **fork** of the repo
 * Make sure you have two **remotes**: **origin** (fork) and **upstream** (our repository)
@@ -68,7 +68,7 @@ How to use and create Pull Requests?
 
 Also, do not forged to follow the [styleguides](#styleguides) :wink:
 
-How to update my fork and keep local changes?
+#### How to update forks?
 
 **A. Uncommitted**
 
@@ -76,11 +76,13 @@ How to update my fork and keep local changes?
 * Run **git pull upstream (branch, e.g. develop)** to update your fork with latest changes
 * Get your changes back by using **git stash pop**. If there are any conflicts, open Google
 
-**B. Committed**
+**B. Committed** or **without changes**
 
-* Use **git merge** (see [documentation](https://www.git-scm.com/docs/git-merge))
+* Get our changes using **git fetch upstream**
+* Use **git merge upstream/(branch)** (see [documentation](https://www.git-scm.com/docs/git-merge), use Google and resolve conflicts)
+* Push commits to a fork with **git push**
 
-If someone requested some changes and the request was refused, no need to be impolite or give up.\
+If you create a pull request and the request is getting refused, no need to be impolite or give up.\
 You can still do something for this world and improve the code once more. But next time make sure that everything is good enough to be merged (accepted).
 
 ## Styleguides
