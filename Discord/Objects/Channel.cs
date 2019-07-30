@@ -42,7 +42,7 @@ namespace dotBridge.Discord.Objects
         public Optional<int> RateLimitPerUser;
 
         [JsonProperty(PropertyName = "recipients")]
-        public Optional<User[]> recipients;
+        public Optional<User[]> Recipients;
 
         [JsonProperty(PropertyName = "icon")]
         public Optional<string> Icon;
