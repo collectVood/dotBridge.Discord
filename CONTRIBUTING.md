@@ -97,7 +97,7 @@ You can still do something for this world and improve the code once more. But ne
 ### XML documentation comments
 
 * Use the present tense (**"Get data"**, not **"Will get data"**)
-* Use an imperative mood (**"Set data**, not **"Sets data"**)
+* Use an imperative mood (**"Set data"**, not **"Sets data"**)
 * Make comment as **small, descriptive and clear**, as possible
 * Use [**tags**](https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments)
 * For logical variables (boolean), use **"Whether ..."**. Example: **"Whether the client is active"**
