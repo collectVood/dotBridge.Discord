@@ -20,7 +20,7 @@ namespace dotBridge.Discord.Objects
         public bool Syncing;
         
         [JsonProperty(PropertyName = "role_id")]
-        public string Role;
+        public string RoleID;
         
         [JsonProperty(PropertyName = "expire_behavior")]
         public string ExpireBehavior;

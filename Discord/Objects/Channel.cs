@@ -12,7 +12,7 @@ namespace dotBridge.Discord.Objects
         public int RawType;
 
         [JsonProperty(PropertyName = "guild_id")]
-        public Optional<string> Guild;
+        public Optional<string> GuildID;
 
         [JsonProperty(PropertyName = "position")]
         public Optional<int> Position;
@@ -29,7 +29,7 @@ namespace dotBridge.Discord.Objects
         public Optional<bool> Nsfw;
 
         [JsonProperty(PropertyName = "last_message_id")]
-        public Optional<string> LastMessage;
+        public Optional<string> LastMessageID;
 
         [JsonProperty(PropertyName = "bitrate")]
         public Optional<int> BitRate;
@@ -46,13 +46,13 @@ namespace dotBridge.Discord.Objects
         public Optional<string> Icon;
 
         [JsonProperty(PropertyName = "owner_id")]
-        public Optional<string> Owner;
+        public Optional<string> OwnerID;
 
         [JsonProperty(PropertyName = "application_id")]
-        public Optional<string> Application;
+        public Optional<string> ApplicationID;
 
         [JsonProperty(PropertyName = "parent_id")]
-        public Optional<string> Parent;
+        public Optional<string> ParentID;
 
         [JsonProperty(PropertyName = "last_pin_timestamp")]
         public Optional<string> RawLastPinTimestamp;

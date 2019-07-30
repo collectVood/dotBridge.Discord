@@ -8,6 +8,6 @@ namespace dotBridge.Discord.Objects
         public bool Enabled;
         
         [JsonProperty(PropertyName = "channel_id")]
-        public string Channel;
+        public string ChannelID;
     }
 }

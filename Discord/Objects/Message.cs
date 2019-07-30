@@ -9,10 +9,10 @@ namespace dotBridge.Discord.Objects
         public string ID;
         
         [JsonProperty(PropertyName = "channel_id")]
-        public string Channel;
+        public string ChannelID;
         
         [JsonProperty(PropertyName = "guild_id")]
-        public Optional<string> Guild;
+        public Optional<string> GuildID;
         
         // TODO: User
         
@@ -50,7 +50,7 @@ namespace dotBridge.Discord.Objects
         public bool Pinned;
 
         [JsonProperty(PropertyName = "webhook_id")]
-        public Optional<string> Webhook;
+        public Optional<string> WebhookID;
 
         [JsonProperty(PropertyName = "type")]
         public int RawType;

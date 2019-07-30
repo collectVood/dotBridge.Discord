@@ -9,6 +9,6 @@ namespace dotBridge.Discord.Objects
         public int RawType;
 
         [JsonProperty(PropertyName = "party_id")]
-        public Optional<string> Party;
+        public Optional<string> PartyID;
     }
 }

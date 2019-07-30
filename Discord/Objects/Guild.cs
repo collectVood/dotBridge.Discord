@@ -30,7 +30,7 @@ namespace dotBridge.Discord.Objects
         public string Region;
 
         [JsonProperty(PropertyName = "afk_channel_id")]
-        public string AfkChannel;
+        public string AfkChannelID;
 
         [JsonProperty(PropertyName = "afk_timeout")]
         public int AfkTimeout;
@@ -39,7 +39,7 @@ namespace dotBridge.Discord.Objects
         public Optional<bool> EmbedEnabled;
 
         [JsonProperty(PropertyName = "embed_channel_id")]
-        public Optional<string> EmbedChannel;
+        public Optional<string> EmbedChannelID;
 
         [JsonProperty(PropertyName = "verification_level")]
         public int VerificationLevel;
@@ -62,16 +62,16 @@ namespace dotBridge.Discord.Objects
         public int MfaLevel;
 
         [JsonProperty(PropertyName = "application_id")]
-        public string Application;
+        public string ApplicationID;
 
         [JsonProperty(PropertyName = "widget_enabled")]
-        public Optional<bool> WidgetEnabled;
+        public Optional<bool> WidgetEnabledID;
 
         [JsonProperty(PropertyName = "widget_channel_id")]
-        public Optional<string> WidgetChannel;
+        public Optional<string> WidgetChannelID;
 
         [JsonProperty(PropertyName = "system_channel_id")]
-        public Optional<string> SystemChannel;
+        public Optional<string> SystemChannelID;
 
         [JsonProperty(PropertyName = "joined_at")]
         public Optional<string> RawJoinedAt;
