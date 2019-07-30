@@ -60,6 +60,7 @@ You can contribute to our code using Pull Requests section.
 How to use and create Pull Requests?
 
 * Create a **fork** of the repo
+* Make sure you have two **remotes**: **origin** (fork) and **upstream** (our repository)
 * **Improve** the code :chart_with_upwards_trend:
 * **Commit** your changes to the **needed branch**
 * Create a **Pull Request**
@@ -67,7 +68,19 @@ How to use and create Pull Requests?
 
 Also, do not forged to follow the [styleguides](#styleguides) :wink:
 
-If someone requested some changes or the request was refused, no need to be impolite or give up.\
+How to update my fork and keep local changes?
+
+**A. Uncommitted**
+
+* Use **git stash** to save your changes
+* Run **git pull upstream (branch, e.g. develop)** to update your fork with latest changes
+* Get your changes back by using **git stash pop**. If there are any conflicts, open Google
+
+**B. Committed**
+
+* Use **git merge** (see [documentation](https://www.git-scm.com/docs/git-merge))
+
+If someone requested some changes and the request was refused, no need to be impolite or give up.\
 You can still do something for this world and improve the code once more. But next time make sure that everything is good enough to be merged (accepted).
 
 ## Styleguides
