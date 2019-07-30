@@ -10,10 +10,12 @@ namespace dotBridge.Discord.Objects
         
         [JsonProperty(PropertyName = "name")]
         public string Name;
-        
-        // TODO: Array of role id
-        
-        // TODO: User
+
+        [JsonProperty(PropertyName = "roles")]
+        public Optional<string[]> RoleIDs;
+
+        [JsonProperty(PropertyName = "user")]
+        public Optional<User> User;
 
         [JsonProperty(PropertyName = "require_colons")]
         public Optional<bool> RequireColons;

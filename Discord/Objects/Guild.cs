@@ -49,8 +49,9 @@ namespace dotBridge.Discord.Objects
 
         [JsonProperty(PropertyName = "explicit_content_filter")]
         public int ExplicitContentFilter;
-        
-        // TODO: Array of role
+
+        [JsonProperty(PropertyName = "roles")]
+        public Role[] Roles;
 
         [JsonProperty(PropertyName = "emojis")]
         public Emoji[] Emojis;
@@ -73,26 +74,59 @@ namespace dotBridge.Discord.Objects
         [JsonProperty(PropertyName = "system_channel_id")]
         public Optional<string> SystemChannelID;
 
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
         [JsonProperty(PropertyName = "joined_at")]
         public Optional<string> RawJoinedAt;
 
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
         [JsonProperty(PropertyName = "large")]
         public Optional<bool> Large;
 
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
         [JsonProperty(PropertyName = "unavailable")]
         public Optional<bool> Unavailable;
 
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
         [JsonProperty(PropertyName = "member_count")]
         public Optional<int> MemberCount;
 
-        // TODO: Array of voice state
-        
-        // TODO: Array of guild member
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
+        [JsonProperty(PropertyName = "voice_states")]
+        public Optional<VoiceState[]> VoiceStates;
 
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
+        [JsonProperty(PropertyName = "author")]
+        public User Author;
+
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
+        [JsonProperty(PropertyName = "members")]
+        public Optional<GuildMember> Members;
+
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
         [JsonProperty(PropertyName = "channels")]
-        public Channel[] Channels;
-        
-        // TODO: Array of precense
+        public Optional<Channel[]> Channels;
+
+        /// <summary>
+        /// GUILD_CREATE
+        /// </summary>
+        [JsonProperty(PropertyName = "presences")]
+        public Optional<PresenceUpdate[]> Presences;
 
         [JsonProperty(PropertyName = "max_precenses")]
         public int? MaxPrecenses;

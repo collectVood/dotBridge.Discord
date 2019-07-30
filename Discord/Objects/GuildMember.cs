@@ -5,7 +5,8 @@ namespace dotBridge.Discord.Objects
 {
     public class GuildMember
     {
-        // TODO: User
+        [JsonProperty(PropertyName = "user")]
+        public User User;
 
         [JsonProperty(PropertyName = "nick")]
         public Optional<string> Nick;

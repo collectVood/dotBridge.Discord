@@ -7,6 +7,7 @@ namespace dotBridge.Discord.Objects
         [JsonProperty(PropertyName = "reason")]
         public string Reason;
         
-        // TODO: User
+        [JsonProperty(PropertyName = "user")]
+        public User User;
     }
 }

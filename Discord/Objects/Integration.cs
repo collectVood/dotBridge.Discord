@@ -27,11 +27,13 @@ namespace dotBridge.Discord.Objects
         
         [JsonProperty(PropertyName = "expire_grace_period")]
         public string ExpireGracePeriod;
-        
-        // TODO: User
-        
-        // TODO: Integration account
-        
+
+        [JsonProperty(PropertyName = "user")]
+        public User User;
+
+        [JsonProperty(PropertyName = "account")]
+        public IntegrationAccount Account;
+
         [JsonProperty(PropertyName = "synced_at")]
         public string SyncedAt;
     }

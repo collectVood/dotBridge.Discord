@@ -16,8 +16,9 @@ namespace dotBridge.Discord.Objects
 
         [JsonProperty(PropertyName = "position")]
         public Optional<int> Position;
-        
-        // TODO: Array of overwrite
+
+        [JsonProperty(PropertyName = "permission_overwrites")]
+        public Optional<Overwrite[]> PermissionOverwrites;
 
         [JsonProperty(PropertyName = "name")]
         public Optional<string> Name;
@@ -39,8 +40,9 @@ namespace dotBridge.Discord.Objects
 
         [JsonProperty(PropertyName = "rate_limit_per_user")]
         public Optional<int> RateLimitPerUser;
-        
-        // TODO: Array of user
+
+        [JsonProperty(PropertyName = "recipients")]
+        public Optional<User[]> recipients;
 
         [JsonProperty(PropertyName = "icon")]
         public Optional<string> Icon;

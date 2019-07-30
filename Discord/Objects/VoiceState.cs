@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace dotBridge.Discord.Objects
 {
-    public class Voice
+    public class VoiceState
     {
         [JsonProperty(PropertyName = "guild_id")]
         public Optional<string> GuildID;

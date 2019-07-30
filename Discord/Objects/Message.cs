@@ -13,10 +13,15 @@ namespace dotBridge.Discord.Objects
         
         [JsonProperty(PropertyName = "guild_id")]
         public Optional<string> GuildID;
-        
-        // TODO: User
-        
-        // TODO: Guild member
+
+        /// <summary>
+        /// MESSAGE_CREATE and MESSAGE_UPDATE
+        /// </summary>
+        [JsonProperty(PropertyName = "author")]
+        public User Author;
+
+        [JsonProperty(PropertyName = "member")]
+        public Optional<GuildMember> Member;
 
         [JsonProperty(PropertyName = "content")]
         public Optional<string> Content;
@@ -32,16 +37,24 @@ namespace dotBridge.Discord.Objects
 
         [JsonProperty(PropertyName = "mention_everyone")]
         public bool MentionEveryone;
-        
-        // TODO: Array of user
-        
-        // TODO: Array of role ID
-        
-        // TODO: Array of attachment
-        
-        // TODO: Arary of embed
-        
-        // TODO: Array of reaction
+
+        /// <summary>
+        /// MESSAGE_CREATE and MESSAGE_UPDATE
+        /// </summary>
+        [JsonProperty(PropertyName = "mentions")]
+        public Optional<User[]> Mentions;
+
+        [JsonProperty(PropertyName = "mention_roles")]
+        public string[] MentionRoles;
+
+        [JsonProperty(PropertyName = "attachments")]
+        public Attachment[] Attachements;
+
+        [JsonProperty(PropertyName = "embeds")]
+        public Embed[] Embeds;
+
+        [JsonProperty(PropertyName = "reactions")]
+        public Optional<Reaction[]> Reactions;
 
         [JsonProperty(PropertyName = "nonce")]
         public Optional<string> Nonce;
@@ -54,9 +67,11 @@ namespace dotBridge.Discord.Objects
 
         [JsonProperty(PropertyName = "type")]
         public int RawType;
-        
-        // TODO: Message activity
-        
-        // TODO: Message application
+
+        [JsonProperty(PropertyName = "activity")]
+        public Optional<MessageActivity> Activity;
+
+        [JsonProperty(PropertyName = "application")]
+        public Optional<MessageApplication> Application;
     }
 }

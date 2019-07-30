@@ -19,9 +19,10 @@ namespace dotBridge.Discord.Objects
         
         [JsonProperty(PropertyName = "action_type")]
         public AuditLogEvent Type;
-        
-        // TODO: Audit Entry Info
-        
+
+        [JsonProperty(PropertyName = "options")]
+        public Optional<AuditEntryInfo> Options;
+
         [JsonProperty(PropertyName = "reason")]
         public Optional<string> Reason;
     }

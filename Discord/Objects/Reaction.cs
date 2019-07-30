@@ -9,7 +9,8 @@ namespace dotBridge.Discord.Objects
         
         [JsonProperty(PropertyName = "me")]
         public bool Me;
-        
-        // TODO: Emoji
+
+        [JsonProperty(PropertyName = "emoji")]
+        public Emoji Emoji;
     }
 }
