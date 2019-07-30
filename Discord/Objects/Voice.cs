@@ -6,19 +6,19 @@ namespace dotBridge.Discord.Objects
     public class Voice
     {
         [JsonProperty(PropertyName = "guild_id")]
-        public Optional<string> GuildId;
+        public Optional<string> GuildID;
 
         [JsonProperty(PropertyName = "channel_id")]
-        public string ChannelId;
+        public string ChannelID;
 
         [JsonProperty(PropertyName = "user_id")]
-        public string UserId;
+        public string UserID;
 
         [JsonProperty(PropertyName = "member")]
         public Optional<GuildMember> Member;
 
         [JsonProperty(PropertyName = "session_id")]
-        public string SessionId;
+        public string SessionID;
 
         [JsonProperty(PropertyName = "deaf")]
         public bool Deaf;

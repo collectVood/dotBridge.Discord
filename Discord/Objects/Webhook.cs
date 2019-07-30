@@ -9,10 +9,10 @@ namespace dotBridge.Discord.Objects
         public string ID;
 
         [JsonProperty(PropertyName = "guild_id")]
-        public Optional<string> GuildId;
+        public Optional<string> GuildID;
 
         [JsonProperty(PropertyName = "channel_id")]
-        public string Channel;
+        public string ChannelID;
 
         [JsonProperty(PropertyName = "user")]
         public Optional<User> User;
